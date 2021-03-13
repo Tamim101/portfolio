@@ -31,7 +31,7 @@ class send_email(APIView):
             print(note , name , email)
             print('email')
             email = send_mail('from : {}'.format(email) , 'Hey, it\'s {} '.format(name) + note ,
-                              EMAIL_HOST_USER , ['tamimkhan7133@gmail.com' , ] , fail_silently=False)
+                              EMAIL_HOST_USER , ['tamimkhan7133@.com' , ] , fail_silently=False)
 
             return Response({'success': True , 'message': 'Thanks for contacting us, will get back to you soon.' , 'email': email})
 
