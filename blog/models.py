@@ -24,3 +24,11 @@ class portfilio(models.Model):
     image1 = models.ImageField(upload_to='Image')
     image2 = models.ImageField(upload_to='Image')
     image3 = models.ImageField(upload_to='Image')
+
+class email(models.Model):
+    name = models.CharField(max_length=100,blank=True,null=False)
+    email = models.EmailField(max_length=200,blank=True,null=False)
+    note = models.CharField(max_length=100,blank=True,null=False)
+
+    def __str__(self):
+        return self.name
